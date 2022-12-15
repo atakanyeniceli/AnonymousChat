@@ -31,7 +31,7 @@ const MessageInput = () => {
       <form action="" onSubmit={messageSend}>
         <input
           type="text"
-          className="w-full outline-none px-2 py-1"
+          className="w-full outline-none px-2 py-1 my-3"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
         />
