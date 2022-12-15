@@ -17,7 +17,7 @@ const MessageInput = () => {
 
   const messageSend = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (userName) {
+    if (userName && messageText.length > 1) {
       client
         .mutate({
           mutation: mutation(),
@@ -31,7 +31,7 @@ const MessageInput = () => {
       <form action="" onSubmit={messageSend}>
         <input
           type="text"
-          className="w-full outline-none"
+          className="w-full outline-none px-2 py-1"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
         />
